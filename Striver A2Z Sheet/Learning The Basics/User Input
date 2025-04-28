@@ -1,0 +1,42 @@
+#Print
+print("Hello world")
+#Output - Hello world
+
+#Printing with Space at End
+print('Sharath',end=" ")#Same Line End
+print()#Next Line
+#Output - Sharath
+
+#Printing with Seperator
+print("18th","december","2025",sep=",")
+#Output - 18th,december,2025
+
+#Storing Values in Variable and Printing
+x = 10
+print(x)
+#Output - 10
+
+#Output formatting
+x = 5
+y = 10
+print('The value of x is {} and the value of y is {}'.format(x,y))
+#Output - The value of x is 5 and the value of y is 10
+
+#Getting Input from the user
+inp = input() # String Format
+print(type(inp))
+#output 
+"""10
+<class 'str'>"""
+
+#String to Integer Input Conversion
+inp = int(input())
+print(type(inp))
+#output 
+"""100
+<class 'int'>"""
+
+
+
+
+
