@@ -1,0 +1,136 @@
+#List in Python
+mylist = ["apple", "banana", "cherry"]
+print(mylist)
+#Output - ['apple', 'banana', 'cherry']
+
+#Python List Allows duplicate
+thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+print(thislist)
+#Output - ['apple', 'banana', 'cherry', 'apple', 'cherry']
+
+#Length of List
+print(len(thislist))
+#Output - 5
+
+#Accessing Items
+l = ['a','b','c']
+print(l[0])
+#Output - a
+
+#Printing Last Element of List
+print(l[-1])
+#Output - c
+
+#Check if element is available
+if "apple" in thislist:
+    print("apple is available in thislist")
+#Output - apple is available in thislist
+
+#Changing ELement in list
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+#Output - ['apple', 'blackcurrant', 'cherry']
+
+#Changing element with splicing
+thislist = ["apple", "banana", "cherry"]
+thislist[1:2] = ["blackcurrant", "watermelon"]
+print(thislist)
+#Output - ['apple', 'blackcurrant', 'watermelon', 'cherry']
+
+#Extend the list with another list
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+#Output - ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+
+#Remove the first occurrence of Element
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+#Output - ['apple', 'cherry']
+
+#Removing an Element from particular index
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+#Output - ['apple', 'cherry']
+
+#Removing the Last Element
+l = [1,2,3]
+l.pop()
+print(l)
+#Output - [1, 2]
+
+#Clearing the List Content
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist) # Output - []
+
+#Iteration of List
+thislist = ["apple", "banana", "cherry"]
+for item in thislist:
+    print(item)
+#Output
+"""apple
+banana
+cherry"""
+
+#Iteration by Index Number
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+    print(thislist[i])
+#Output
+"""apple
+banana
+cherry"""
+
+# List Manipulation - Creating list with elements that start with letter a
+list = ['apple','amla','orange']
+newlist = [x for x in list if x[0]=='a']
+print(newlist)
+#output - ['apple', 'amla']
+
+#Uppercase
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x.upper() for x in fruits]
+print(newlist)
+#output - ['APPLE', 'BANANA', 'CHERRY', 'KIWI', 'MANGO']
+
+#Sorting the elements
+l = [3,2,1]
+l.sort()
+print(l)
+#Output - [1, 2, 3]
+
+#Reversing the List
+l.sort(reverse=True)
+print(l)
+#Output - [3, 2, 1]
+
+#Sorting the list using key [Order - Number closest to 50]
+def myfunc(n):
+  return abs(n - 50)
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist)
+#Output - [50, 65, 23, 82, 100]
+
+#Copy the list
+oldlist = [1,2,3]
+newlist = oldlist.copy()
+print(newlist)
+#Output - [1, 2, 3]
+
+#Join List
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+list3 = list1 + list2
+print(list3)
+#Output - ['a', 'b', 'c', 1, 2, 3]
+
+
+
