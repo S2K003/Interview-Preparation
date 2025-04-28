@@ -1,0 +1,85 @@
+#Data Types
+
+#Integer 
+x = 5
+print(type(x))
+#output - <class 'int'>
+
+#Float 
+x = float(5.5)
+print(type(x))
+#Output - <class 'float'>
+
+#Complex
+x = 1j
+print(type(x))
+#Output - <class 'complex'>
+
+#List
+x = ['apple','orange','mango']
+print(type(x))
+#output - ['apple', 'orange', 'mango'] <class 'list'>
+
+#Tuple
+x = (1,2,2)
+print(type(x))
+#Output - (1, 2, 2) <class 'tuple'>
+
+#Range
+x = range(5)
+print(x)
+print(type(x))
+#Output - range(0, 5) <class 'range'>
+
+#Dictionary - Key Value Pair Equivalent of HashMap
+dict = {"Sharath":36,"Ram":26}
+print(dict)
+print(type(dict))
+# Output - {'Sharath': 36, 'Ram': 26}<class 'dict'>
+
+#Dictionary
+print(dict["Sharath"])#Displays Roll Number 
+#Output - 36
+
+#Dictionary Eliminates Duplicate value and overwrites with the last value
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(thisdict)
+#Output - {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
+
+#List inside Dict
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+print(thisdict["colors"][0])
+#Output - red
+
+#Set - Dictionary is actually a set 
+#Set doesnt allow duplicate values
+s = {'a','b','a'}
+print(s) # Output - {'b', 'a'}
+
+#Frozen Set
+# Frozen set doesnt allow changing value in list
+l = ['a','b','c']
+print(frozenset(l)) # Output - frozenset({'a', 'c', 'b'})
+#Now you cant change the values later
+
+#Boolean Value 
+x = True
+print(type(x)) #Output - <class 'bool'>
+
+#Byte
+x = b"Hello"
+print(type(x)) # <class 'bytes'>
+
+#None
+x = None
+print(type(x)) # Output - <class 'NoneType'>
