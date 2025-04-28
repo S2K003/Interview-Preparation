@@ -1,0 +1,25 @@
+#If elif else statement
+a = 50
+b = 50
+if a>b: 
+    print('a is greater than b')
+elif a==b:
+    print('a is equal to b')
+else:
+    print('b is greater than a')
+    
+#Output - a is equal to b
+
+#Short Method
+a = 50
+b = 40
+print("same") if a==b else print("not same")
+#Output - not same
+
+#and or not
+a=10
+b=10
+c=20
+if (a == b or a==c ) and b!=c :
+    print("yes")
+#output - yes
