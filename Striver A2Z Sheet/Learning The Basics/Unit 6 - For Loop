@@ -1,0 +1,48 @@
+#Iterate through loop
+fruits = ['apple','orange','banana']
+for fruit in fruits:
+    print(fruit)
+#Output -
+"""
+apple
+orange
+banana
+"""
+
+#Looping through string
+word = "apple"
+for letter in word:
+    print(letter,end=" ")
+#Output - a p p l e
+
+#Range
+for i in range(5):
+    print(i,end=" ")
+#Output - 0 1 2 3 4
+
+#Special Condition with for loop else
+for x in range(6):
+  if x == 3: break
+  print(x)
+else:
+  print("Finally finished!")
+
+#Nested For Loop
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+  for y in fruits:
+    print(x, y)
+    
+"""
+red apple
+red banana
+red cherry
+big apple
+big banana
+big cherry
+tasty apple
+tasty banana
+tasty cherry
+"""
