@@ -1,0 +1,24 @@
+#Normal Function
+def func():
+    print("this is a function")
+func()
+#Output - this is a function
+
+#Parameter Passing
+def add(n1,n2):
+    print(n1+n2)
+add(100,20)
+#Output - 120
+
+#Arbitrary Arguments, *args
+def my_function(*kids):
+  print("The youngest child is " + kids[-1])
+
+my_function("Emil", "Tobias", "Linus")
+
+#Arbitrary Keyword Arguments, **kwargs
+def my_function(**kid):
+  print("His last name is " + kid["lname"])
+
+my_function(fname = "Tobias", lname = "Refsnes")
+#output - His last name is Refsnes
