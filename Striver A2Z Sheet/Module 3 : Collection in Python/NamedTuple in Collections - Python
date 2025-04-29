@@ -1,0 +1,50 @@
+# Importing namedtuple from the collections module
+from collections import namedtuple
+
+# Creating a namedtuple class called 'Student' with fields 'roll', 'dept', 'id', and 'name'
+Student = namedtuple('Student', ['roll', 'dept', 'id', 'name'])
+
+# Creating instances of the Student namedtuple
+S1 = Student('101', 'CSE', '1', 'Sharath')
+S2 = Student('102', 'ECE', '2', 'Ravi')
+S3 = Student('103', 'MECH', '3', 'Kiran')
+
+# Printing the namedtuple instances
+print(S1)  # Output: Student(roll='101', dept='CSE', id='1', name='Sharath')
+print(S2)  # Output: Student(roll='102', dept='ECE', id='2', name='Ravi')
+print(S3)  # Output: Student(roll='103', dept='MECH', id='3', name='Kiran')
+
+# 1. _fields
+print(S1._fields)  
+# This returns a tuple containing the field names of the namedtuple
+# Output: ('roll', 'dept', 'id', 'name')
+
+# 2. _asdict()
+print(S1._asdict())  
+# Converts the namedtuple to an OrderedDict (preserves field order)
+# Output: OrderedDict([('roll', '101'), ('dept', 'CSE'), ('id', '1'), ('name', 'Sharath')])
+
+# 3. _replace()
+S1_updated = S1._replace(name='Arun')  
+print(S1_updated)
+# Creates a new instance of the namedtuple with one or more fields replaced
+# Output: Student(roll='101', dept='CSE', id='1', name='Arun')
+
+# 4. _make()
+data = ['104', 'CIVIL', '4', 'Manoj']
+S4 = Student._make(data)
+print(S4)
+# Creates a new instance of the namedtuple from an iterable (like list or tuple)
+# Output: Student(roll='104', dept='CIVIL', id='4', name='Manoj')
+
+# 5. Field access by name
+print(S1.name)
+# You can access fields just like attributes of an object
+# Output: 'Sharath'
+
+# 6. Field access by index
+print(S1[0])
+# You can also access fields by index (like a tuple)
+# Output: '101'
+
+# namedtuple is immutable
