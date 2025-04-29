@@ -1,0 +1,27 @@
+#Deque - Double ended Queue
+from collections import deque
+
+queue = deque([1,2,3])
+print(queue)
+#Output - deque([1, 2, 3])
+
+#Inserting Elements , append to right
+queue.append(4)
+print(queue)
+#Output - deque([1, 2, 3, 4])
+
+#Inserting Elements , append to left
+queue.appendleft(0)
+print(queue)
+#Output - deque([0, 1, 2, 3, 4])
+
+#Deleting from right end - pop()
+queue.pop()
+print(queue)
+#Output - deque([0, 1, 2, 3])
+
+#Deleting the left end - popleft()
+queue.popleft()
+print(queue)
+#Output - deque([1, 2, 3])
+
