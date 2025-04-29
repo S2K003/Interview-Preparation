@@ -1,0 +1,73 @@
+# Import OrderedDict from the collections module
+from collections import OrderedDict
+
+# Regular dictionary (Python 3.7+ keeps insertion order)
+regular_dict = {
+    'apple': 1,
+    'banana': 2,
+    'cherry': 3
+}
+
+# Print Regular dictionaries
+print("Regular Dictionary:")
+for key, value in regular_dict.items():
+    print(key, value)
+"""Output
+Regular Dictionary:
+apple 1
+banana 2
+cherry 3
+"""
+
+# Ordered dictionary
+ordered_dict = OrderedDict()
+ordered_dict['apple'] = 1
+ordered_dict['banana'] = 2
+ordered_dict['cherry'] = 3
+
+print("\nOrdered Dictionary:")
+for key, value in ordered_dict.items():
+    print(key, value)
+"""Output
+Ordered Dictionary:
+apple 1
+banana 2
+cherry 3
+"""
+
+# Difference: OrderedDict allows reordering
+# Move 'banana' to the end
+ordered_dict.move_to_end('banana')
+
+print("\nOrdered Dictionary after moving 'banana' to the end:")
+for key, value in ordered_dict.items():
+    print(key, value)
+
+"""Output
+Ordered Dictionary after moving 'banana' to the end:
+apple 1
+cherry 3
+banana 2
+"""
+
+# Regular dict does not support move_to_end()
+# Uncommenting below line will raise an AttributeError
+# regular_dict.move_to_end('banana')
+
+from collections import OrderedDict
+
+od = OrderedDict()
+od['a'] = 1
+od['b'] = 2
+od['c'] = 3
+
+print("Reverse iteration of OrderedDict:")
+for key in reversed(od):
+    print(key, od[key])
+
+"""Output
+Reverse iteration of OrderedDict:
+c 3
+b 2
+a 1
+"""

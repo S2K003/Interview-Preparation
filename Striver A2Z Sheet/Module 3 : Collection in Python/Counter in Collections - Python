@@ -1,0 +1,12 @@
+#Counter in Python
+from collections import Counter
+
+print(Counter(['A','B','C','A','B','C']))
+#Output - Counter({'A': 2, 'B': 2, 'C': 2})
+
+print(Counter({'A':3,'B':5,'C':2}))
+#Output - Counter({'B': 5, 'A': 3, 'C': 2})
+
+print(Counter(A=3, B=5, C=2))
+#Output - print(Counter(A=3, B=5, C=2))
+

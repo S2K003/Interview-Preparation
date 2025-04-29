@@ -1,0 +1,23 @@
+#DefaultDict can be used as Counter directly as hash map
+
+from collections import defaultdict
+
+d = defaultdict(int)
+l = [1,2,2,1]
+
+for ele in l:
+    d[ele] +=1
+
+print(d)
+#Output - defaultdict(<class 'int'>, {1: 2, 2: 2})
+
+#Defaultdict can also be used to store the position of the particular index of count elements
+from collections import defaultdict
+
+d = defaultdict(list)
+l = [1,2,3,2,1]
+
+for i in range(len(l)):
+    d[l[i]].append(i)
+print(d)
+#Output - defaultdict(<class 'list'>, {1: [0, 4], 2: [1, 3], 3: [2]})
