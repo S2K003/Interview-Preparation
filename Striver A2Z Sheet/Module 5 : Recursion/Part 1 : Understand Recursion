@@ -1,0 +1,10 @@
+#Understanding Recursion
+def recursion(n):
+    if n<=0:
+        return 
+    print(n)
+    n-=1
+    recursion(n)
+if __name__ == "__main__":
+    recursion(5)
+
