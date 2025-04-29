@@ -1,0 +1,9 @@
+#Printing Name n times using recursion
+def name_print(n):
+    if n>=0:
+        print("S2K")
+        n-=1
+        name_print(n)
+    return
+if __name__ == "__main__":
+    name_print(5)
