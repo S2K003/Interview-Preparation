@@ -1,0 +1,31 @@
+#Recursive Method
+def palindrome(s,left,right):
+    if left<right:
+        if s[left] != s[right]:
+            return False
+        return palindrome(s,left+1,right-1)
+    return True
+
+if __name__ == "__main__":
+    s="amma"
+    left = 0 
+    right = len(s)-1
+    res = palindrome(s,left,right)
+    print(res)
+
+#LeetCode Optimal Method - #https://leetcode.com/problems/valid-palindrome/
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        s = ''.join(c.lower() for c in s if c.isalnum())
+        left = 0
+        right = len(s) - 1
+        while left<right:
+            if s[left]!=s[right]:
+                return False
+            left+=1
+            right-=1
+        return True
