@@ -1,0 +1,28 @@
+"""
+Given an integer N, print all the divisors of N in the ascending order.
+Example 1:
+Input : 20
+Output: 1 2 4 5 10 20
+Explanation: 20 is completely 
+divisible by 1, 2, 4, 5, 10 and 20.
+Example 2:
+Input: 21191
+Output: 1 21191
+Explanation: As 21191 is a prime number,
+it has only 2 factors(1 and the number itself).
+"""
+
+import math
+class Solution:
+    def print_divisors(self, N):
+        small_divisors = []
+        large_divisors = []
+        for i in range(1, int(math.sqrt(N)) + 1):
+            if N % i == 0:
+                small_divisors.append(i)
+                if i != N // i: 
+                    large_divisors.append(N // i)
+    
+        divisors = small_divisors + large_divisors[::-1]
+        for ele in divisors:
+            print(ele, end=' ')
