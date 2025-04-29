@@ -1,0 +1,51 @@
+# Create a list
+my_list = [10, 20, 30]
+
+# ✅ Lists are mutable
+print("Original list:", my_list)
+#Original list: [10, 20, 30]
+my_list[0] = 100  # Modifying the first element
+print("Modified list:", my_list)
+#Modified list: [100, 20, 30]
+
+#Create a Tuple
+my_tuple = (10, 20, 30)
+# ❌ Tuples are immutable
+print("\nOriginal tuple:", my_tuple)
+# Original tuple: (10, 20, 30)
+# The line below will raise an error if uncommented
+# my_tuple[0] = 100  # TypeError
+
+#Lists have more methods
+my_list.append(40)
+print("\nList after append:", my_list)
+#List after append: [100, 20, 30, 40]
+
+# ❌ Tuples have limited methods
+print("\nTuple count of 20:", my_tuple.count(20))  # Count occurrences
+#Tuple count of 20: 1
+print("Tuple index of 30:", my_tuple.index(30))    # Index of value
+#Tuple index of 30: 2
+
+# ✅ Tuples can be used as dictionary keys if they are immutable
+my_dict = {}
+my_dict[(1, 2)] = "Tuple Key Allowed"
+print("\nDictionary with tuple as key:", my_dict)
+
+# ❌ Lists cannot be used as dictionary keys
+# The line below will raise an error if uncommented
+# my_dict[[1, 2]] = "List Key Not Allowed"  # TypeError
+
+
+# List vs Tuple – Difference Table
+|-----------------------------------|--------------------------------------------|---------------------------------------------|
+| Feature                           | List (`list`)                              | Tuple (`tuple`)                             |
+|-----------------------------------|--------------------------------------------|---------------------------------------------|
+| **Syntax**                        | `my_list = [1, 2, 3]`                      | `my_tuple = (1, 2, 3)`                      |
+| **Mutability**                    | ✅ Mutable (can change elements)           | ❌ Immutable (cannot change elements)      |
+| **Methods available**             | More (e.g., `append()`, `remove()`)        | Fewer (e.g., `count()`, `index()`)          |
+| **Performance**                   | Slightly slower due to dynamic nature      | Faster due to immutability and caching      |
+| **Use case**                      | For dynamic, frequently changing data      | For fixed data, configuration, or constants |
+| **Memory usage**                  | More memory required                       | Less memory required                        |
+| **Hashable (usable as dict key)** | ❌ No (unless contents are immutable)      | ✅ Yes (if all elements are immutable)     |
+|-----------------------------------|--------------------------------------------|---------------------------------------------|
