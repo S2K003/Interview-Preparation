@@ -1,0 +1,9 @@
+#Printing 1-N using Recursion
+def count(i,n):
+    if i<=n:
+        print(i)
+        i+=1
+        count(i,n)
+    return
+if __name__ == "__main__":
+    count(1,7)
