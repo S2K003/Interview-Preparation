@@ -1,0 +1,13 @@
+#Pattern
+for i in range(5,0,-1):
+    temp = 64
+    for j in range(5-i+1):
+        print(chr(i+temp),end=' ')
+        temp+=1
+    print()
+
+E 
+D E 
+C D E 
+B C D E 
+A B C D E 
