@@ -19,3 +19,8 @@ while(inp>0):
     inp = inp//10
 print(count)
 
+""" Output
+123
+3
+"""
+
