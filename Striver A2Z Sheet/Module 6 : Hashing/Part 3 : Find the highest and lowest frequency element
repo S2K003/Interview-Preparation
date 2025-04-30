@@ -1,0 +1,49 @@
+"""
+Problem Statement: Given an array of size N. Find the highest and lowest frequency element.
+
+Examples:
+
+Example 1:
+Input: array[] = {10,5,10,15,10,5};
+Output: 10 15
+Explanation: The frequency of 10 is 3, i.e. the highest and the frequency of 15 is 1 i.e. the lowest.
+
+Example 2:
+Input: array[] = {2,2,3,4,4,2};
+Output: 2 3
+Explanation: The frequency of 2 is 3, i.e. the highest and the frequency of 3 is 1 i.e. the lowest.
+"""
+#Code
+arr= [10,5,10,15,10,5]
+n=len(arr)
+mp = {}
+for i in range(n):
+    if arr[i] not in mp:
+        mp[arr[i]] = 1
+    else:
+        mp[arr[i]] +=1
+print(mp)
+
+min_freq = min(mp.values())
+max_freq = max(mp.values())
+
+print("Minimum Frequency Element")
+for key,value in mp.items():
+    if(min_freq == value):
+        print(key,value)
+
+print("Maximum Frequency Element")
+for key,value in mp.items():
+    if(max_freq == value):
+        print(key,value)
+
+#Output
+"""
+{10: 3, 5: 2, 15: 1}
+Minimum Frequency Element
+15 1
+Maximum Frequency Element
+10 3
+"""
+    
+    
