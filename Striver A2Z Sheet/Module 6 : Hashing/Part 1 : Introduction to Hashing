@@ -1,0 +1,29 @@
+# Create a hash map using a Python dictionary
+student_marks = {}
+
+# Inserting key-value pairs (hashing happens internally)
+student_marks["Alice"] = 85
+student_marks["Bob"] = 90
+student_marks["Charlie"] = 78
+
+# Accessing values using keys (hashed lookup)
+print("Alice's marks:", student_marks["Alice"])  # Output: 85
+print("Bob's marks:", student_marks["Bob"])      # Output: 90
+
+# Checking if a key exists
+if "Charlie" in student_marks:
+    print("Charlie's marks:", student_marks["Charlie"])
+
+# Updating a value
+student_marks["Alice"] = 95
+print("Updated Alice's marks:", student_marks["Alice"])
+
+# Deleting a key-value pair
+del student_marks["Bob"]
+
+# Printing the final hash map
+print("Final student marks:", student_marks)
+
+#Printing the values
+for key,value in student_marks.items():
+    print(key,value)
