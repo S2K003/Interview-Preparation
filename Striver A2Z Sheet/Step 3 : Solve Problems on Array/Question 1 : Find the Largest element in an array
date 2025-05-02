@@ -1,0 +1,14 @@
+"""
+Find the Largest element in an array
+Problem Statement: Given an array, we have to find the largest element in the array.
+"""
+
+#Code
+arr = [1,2,100,0.5,5,10]
+min_ele = arr[0]
+for ele in arr:
+    if ele<min_ele:
+        min_ele = ele
+print("The Smallest Element is", min_ele)
+
+#Output - The Smallest Element is 0.5
