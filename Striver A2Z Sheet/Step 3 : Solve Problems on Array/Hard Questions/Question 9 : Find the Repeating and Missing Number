@@ -1,0 +1,53 @@
+"""
+Find the repeating and missing numbers
+
+Problem Statement: You are given a read-only array of N integers with values also in the range [1, N] both inclusive. Each integer appears exactly once except A which appears twice and B which is missing. The task is to find the repeating and missing numbers A and B where A repeats twice and B is missing.
+
+Examples
+
+Example 1:
+Input Format:  array[] = {3,1,2,5,3}
+Result: {3,4)
+Explanation: A = 3 , B = 4 
+Since 3 is appearing twice and 4 is missing
+
+Example 2:
+Input Format: array[] = {3,1,2,5,4,6,7,5}
+Result: {5,8)
+Explanation: A = 5 , B = 8 
+Since 5 is appearing twice and 8 is missing
+
+"""
+
+def missing_and_repeating(nums):
+    n = len(nums)
+    
+    # Expected sums
+    sum_of_natural = n * (n + 1) // 2
+    sum_of_squares = n * (n + 1) * (2 * n + 1) // 6
+
+    # Actual sums
+    s1 = sum(nums)
+    s2 = sum(x * x for x in nums)
+
+    # x - y = diff1 (repeating - missing)
+    diff1 = s1 - sum_of_natural
+    # x^2 - y^2 = diff2 = (x - y)(x + y)
+    diff2 = s2 - sum_of_squares
+
+    # x + y = diff2 / diff1
+    diff2 = diff2 // diff1
+
+    # Now solve:
+    # x = (diff1 + sum_xy) // 2
+    # y = x - diff1
+    repeating = (diff1 + diff2) // 2
+    missing = repeating - diff1
+
+    return [missing, repeating]
+
+
+if __name__ == "__main__":
+    arr = [3, 1, 2, 5, 4, 6, 7, 5]
+    missing, repeating = missing_and_repeating(arr)
+    print("Missing:", missing, "Repeating:", repeating)
