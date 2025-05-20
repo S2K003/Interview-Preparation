@@ -30,7 +30,7 @@ def countRotations(arr,left,right):
     mid = left + (right-left) //2
 
     #Check if mid+1 is the element
-    if mid < right and arr[mid+1]<arr[mid]:
+    if mid < right and arr[mid]>arr[mid+1]:
         return mid+1
     
     #Check if mid is the element
