@@ -1,0 +1,52 @@
+"""
+
+Given an array arr[] having distinct numbers sorted in increasing order and the array has been right rotated (i.e, the last element will be cyclically shifted to the starting position of the array) k number of times, the task is to find the value of k.
+
+Examples:  
+
+Input: arr[] = {15, 18, 2, 3, 6, 12}
+Output: 2
+Explanation: Initial array must be {2, 3, 6, 12, 15, 18}. 
+We get the given array after rotating the initial array twice.
+
+Input: arr[] = {7, 9, 11, 12, 5}
+Output: 4
+
+Input: arr[] = {7, 9, 11, 12, 15};
+Output: 0
+
+"""
+
+#Code
+def countRotations(arr,left,right):
+    #Ending of the array
+    if right < left:
+        return 0
+    
+    #Only one element left
+    if left == right:
+        return left
+
+    mid = left + (right-left) //2
+
+    #Check if mid+1 is the element
+    if mid < right and arr[mid+1]<arr[mid]:
+        return mid+1
+    
+    #Check if mid is the element
+    if mid > left and arr[mid] < arr[mid-1]:
+        return mid
+    
+    #Decide to go left or right in count rotations  
+    if arr[right] > arr[mid]:
+        return countRotations(arr,left,mid-1)
+    
+    return countRotations(arr,mid+1,right)
+
+    
+
+if __name__ == "__main__":
+    arr = [3,4,5,1,2]
+    left = 0
+    right = len(arr)-1
+    print(countRotations(arr,left,right))
